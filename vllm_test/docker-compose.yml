@@ -1,0 +1,27 @@
+services:
+  vllm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sharsha-vllm:latest
+    container_name: sharsha-vllm
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    gpus:
+      - device_ids: ["1"]
+        capabilities: [gpu]
+    environment:
+      MODEL_NAME: ${MODEL_NAME:-Qwen/Qwen2.5-14B-Instruct-AWQ}
+      DTYPE: ${DTYPE:-float16}
+      QUANTIZATION: ${QUANTIZATION:-awq}
+      MAX_MODEL_LEN: ${MAX_MODEL_LEN:-32768}
+      GPU_MEMORY_UTILIZATION: ${GPU_MEMORY_UTILIZATION:-0.92}
+      TENSOR_PARALLEL_SIZE: ${TENSOR_PARALLEL_SIZE:-1}
+      LIMIT_MM_PER_PROMPT: ${LIMIT_MM_PER_PROMPT:-}
+      HF_TOKEN: ${HF_TOKEN:-}
+    volumes:
+      - ./models:/models
+    shm_size: "16gb"
+    ipc: host
+
