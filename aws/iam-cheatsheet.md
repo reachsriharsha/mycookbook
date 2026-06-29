@@ -61,6 +61,8 @@ aws iam attach-role-policy --role-name rolename --policy-arn arn:aws:iam::aws:po
 
 IAM policies are JSON documents that define permissions for IAM identities and resources. Policies specify which AWS services and actions are allowed or denied, and can include conditions for fine-grained access control. Managed policies are standalone entities that can be attached to multiple identities, while inline policies are embedded directly into a user, group, or role. Policies follow the principle of least privilege by granting only necessary permissions.
 
+ex: password policy, multi-factor authentication policy, etc.
+
 ```bash
 # Create a managed policy
 aws iam create-policy --policy-name policyname --policy-document file://policy.json
