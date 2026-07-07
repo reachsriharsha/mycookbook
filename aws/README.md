@@ -8,6 +8,7 @@ This directory contains concise cheat sheets and reference guides for various AW
 - [CloudShell](#cloudshell)
 - [EC2 Security Groups](#ec2-security-groups)
 - [EC2 Fleet and Spot Fleet](#ec2-fleet-and-spot-fleet)
+- [EC2 Elastic Network Interfaces](#ec2-elastic-network-interfaces)
 
 ---
 
@@ -40,3 +41,11 @@ EC2 security groups act as virtual firewalls for your EC2 instances to control i
 EC2 Fleet and Spot Fleet are designed to launch a fleet of tens, hundreds, or thousands of Amazon EC2 instances in a single operation. Each instance in a fleet is configured by a launch template or a set of launch parameters that you configure manually at launch. Fleets provide features that maximize cost savings and optimize availability and performance when running applications on multiple EC2 instances. A fleet can launch multiple instance types, Availability Zones, and purchase options to increase flexibility and reduce costs.
 
 **See:** [EC2 Fleet and Spot Fleet Cheatsheet](./ec2-fleets-cheatsheet.md)
+
+---
+
+## EC2 Elastic Network Interfaces
+
+Elastic network interfaces are logical networking components in a VPC that represent virtual network cards. You can create and configure network interfaces and attach them to instances in the same Availability Zone. The attributes of a network interface follow it as it's attached or detached from an instance and reattached to another instance. When you move a network interface from one instance to another, network traffic is redirected from the original instance to the new instance.
+
+**See:** [EC2 Elastic Network Interfaces Cheatsheet](./ec2-eni-cheatsheet.md)
