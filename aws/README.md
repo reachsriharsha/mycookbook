@@ -9,6 +9,7 @@ This directory contains concise cheat sheets and reference guides for various AW
 - [EC2 Security Groups](#ec2-security-groups)
 - [EC2 Fleet and Spot Fleet](#ec2-fleet-and-spot-fleet)
 - [EC2 Elastic Network Interfaces](#ec2-elastic-network-interfaces)
+- [EBS (Elastic Block Store)](#ebs-elastic-block-store)
 
 ---
 
@@ -49,3 +50,11 @@ EC2 Fleet and Spot Fleet are designed to launch a fleet of tens, hundreds, or th
 Elastic network interfaces are logical networking components in a VPC that represent virtual network cards. You can create and configure network interfaces and attach them to instances in the same Availability Zone. The attributes of a network interface follow it as it's attached or detached from an instance and reattached to another instance. When you move a network interface from one instance to another, network traffic is redirected from the original instance to the new instance.
 
 **See:** [EC2 Elastic Network Interfaces Cheatsheet](./ec2-eni-cheatsheet.md)
+
+---
+
+## EBS (Elastic Block Store)
+
+Amazon Elastic Block Store (EBS) provides scalable, high-performance block storage resources for use with Amazon EC2 instances. EBS volumes function like raw, unformatted block devices that can be mounted as devices on instances. With EBS, you can create storage volumes and attach them to EC2 instances, use them like local hard drives, create point-in-time snapshots for backup and recovery, and dynamically scale storage capacity and performance without downtime.
+
+**See:** [EBS Cheatsheet](./ebs-cheatsheet.md)
